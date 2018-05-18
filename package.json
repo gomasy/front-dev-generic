@@ -1,15 +1,5 @@
 {
     "private": true,
-    "babel": {
-        "presets": [
-            [ "env", {
-                "modules": false,
-                "browsers": [
-                    "last 2 versions"
-                ]
-            }]
-        ]
-    },
     "scripts": {
         "build": "yarn install && NODE_ENV=production webpack -p",
         "dev": "yarn install && NODE_ENV=development webpack -d",
