@@ -12,10 +12,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    background: #6eb7ff;
-    border-bottom: solid 6px #3f87ce;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    color: $box-color;
+    background: $box-bg-color;
+    border-bottom: solid 6px $box-border-color;
+    box-shadow: 0 3px 6px $box-shadow-color;
     border-radius: 9px;
     padding: 8px 19px;
     width: 50%;
