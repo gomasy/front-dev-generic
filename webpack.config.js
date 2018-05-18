@@ -16,8 +16,14 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
+                test: /\.js$/,
+                use: [ 'eslint-loader' ],
+                exclude: /node_modules/,
+                enforce: 'pre',
+            },
+            {
                 test: /\.scss$/,
-                use: [ 'css-loader', 'postcss-loader', 'sass-loader' ],
+                use: [ 'style-loader', 'css-loader', 'postcss-loader', 'sass-loader' ],
             },
         ],
     },
@@ -25,17 +31,12 @@ module.exports = {
         new CleanWebpackPlugin([
             path.join(__dirname, '/public/*'),
         ]),
-        new CopyWebpackPlugin(
-            [
-                { from: './src/public' },
+        new CopyWebpackPlugin([{ from: './src/public' }], {
+            ignore: [
+                '.DS_Store',
+                '.gitkeep',
             ],
-            {
-                ignore: [
-                    '.DS_Store',
-                    '.gitkeep',
-                ],
-            },
-        ),
+        }),
     ],
     devServer: {
         host: '0.0.0.0',
