@@ -1,6 +1,7 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: process.env.NODE_ENV,
@@ -23,7 +24,12 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: [ 'style-loader', 'css-loader', 'postcss-loader', 'sass-loader' ],
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'postcss-loader',
+                    'sass-loader',
+                ],
             },
         ],
     },
@@ -36,6 +42,9 @@ module.exports = {
                 '.DS_Store',
                 '.gitkeep',
             ],
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
         }),
     ],
     devServer: {
