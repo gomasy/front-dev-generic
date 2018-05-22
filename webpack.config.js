@@ -35,7 +35,7 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin([
-            path.join(__dirname, '/public/*'),
+            path.join(__dirname, '/public/**'),
         ]),
         new CopyWebpackPlugin([{ from: './src/public' }], {
             ignore: [
