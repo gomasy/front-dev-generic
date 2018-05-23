@@ -1,9 +1,9 @@
 {
     "private": true,
     "scripts": {
-        "build": "yarn install && NODE_ENV=production webpack --optimize-minimize",
-        "watch": "yarn install && NODE_ENV=development webpack --watch",
-        "start": "yarn install && NODE_ENV=development webpack-dev-server"
+        "build": "NODE_ENV=production webpack --optimize-minimize",
+        "watch": "NODE_ENV=development webpack --watch",
+        "start": "NODE_ENV=development webpack-dev-server"
     },
     "devDependencies": {
         "autoprefixer": "^8.5.0",
