@@ -6,7 +6,7 @@
         "start": "NODE_ENV=development webpack-dev-server"
     },
     "devDependencies": {
-        "autoprefixer": "^8.5.2",
+        "autoprefixer": "^8.6.0",
         "babel-core": "^6.26.3",
         "babel-loader": "^7.1.4",
         "babel-preset-env": "^1.7.0",
@@ -19,9 +19,9 @@
         "node-sass": "^4.9.0",
         "normalize.css": "^8.0.0",
         "postcss-loader": "^2.1.5",
-        "sass-loader": "^7.0.1",
+        "sass-loader": "^7.0.2",
         "webpack": "^4.10.2",
-        "webpack-cli": "^2.1.4",
+        "webpack-cli": "^3.0.0",
         "webpack-dev-server": "^3.1.4"
     }
 }
