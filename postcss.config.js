@@ -6,5 +6,6 @@ module.exports = {
             ],
             grid: true,
         },
+        'postcss-custom-media': {},
     },
 };
