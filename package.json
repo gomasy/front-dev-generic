@@ -20,7 +20,7 @@
         "normalize.css": "^8.0.0",
         "postcss-custom-media": "^7.0.7",
         "postcss-loader": "^3.0.0",
-        "sass-loader": "^7.0.2",
+        "sass-loader": "^8.0.0",
         "webpack": "^4.10.2",
         "webpack-cli": "^3.0.2",
         "webpack-dev-server": "^3.1.4"
