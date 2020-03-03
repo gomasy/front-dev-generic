@@ -1,7 +1,7 @@
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     mode: process.env.NODE_ENV,
@@ -34,9 +34,11 @@ module.exports = {
         ],
     },
     plugins: [
-        new CleanWebpackPlugin([
-            path.join(__dirname, '/public/**'),
-        ]),
+        new CleanWebpackPlugin({
+            cleanOnceBeforeBuildPatterns: [
+                path.join(__dirname, '/public/**'),
+            ],
+        }),
         new CopyWebpackPlugin([{ from: './src/public' }], {
             ignore: [
                 '.DS_Store',
